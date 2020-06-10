@@ -12,8 +12,8 @@ def talker():
     msg_i = 0
     
     while not rospy.is_shutdown():
-        msg_str = msgs[msg_i] 
-        rospy.loginfo("Sending %s" % msg_str + " @ %s" % rospy.get_time())
+        msg_str = msgs[msg_i] + " @ %s" % rospy.get_time()
+        rospy.loginfo("Sending %s" % msg_str)
         pub.publish(msg_str)
         
         msg_i += 1
