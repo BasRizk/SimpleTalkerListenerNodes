@@ -6,7 +6,7 @@ def talker():
     pub = rospy.Publisher('talker', String, queue_size=8)
     
     rospy.init_node('talker')
-    rate = rospy.Rate(10)
+    rate = rospy.Rate(1)
     
     msgs = ["BAS RIZK", "STEVEN NASSEF"]
     msg_i = 0
